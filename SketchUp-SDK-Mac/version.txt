@@ -1,0 +1,35 @@
+SDK package version (Release date): Change description
+--------------------------------------------------------------------------------
+8 (4/4/2014):   Added SUGuidePointRef.
+
+7 (3/6/2014):   Updated the Deprecated SkpReader SDK on Mac to read 2014-format
+                skp files.
+
+6 (1/15/2014):  Released API version 2.0
+                Added SUModelSaveToFileWithVersion()
+                Added enum SUModelVersion
+
+5 (11/12/2013): Bumped API Version to 2.0 (alpha)
+                Added SUFaceGetNumOpenings() and SUFaceGetOpenings()
+
+4 (6/25/2013): Fixed compilation issues on Mac while building against the
+               deprecated SketchupReader.framework. Updated the framework
+               to be able to read 2013 files. Also added some files missing
+               from deprecated/SkpWriter/Headers. (Sorry about these omissions). 
+               
+               Added back the old Mac example SkpStats (under
+               deprecated\SkpReader\Examples) that illustrates how to read
+               SU files from a stand-alone program (i.e. not as an exporter).
+               
+               Added missing SU_ERROR_INVALID_OUTPUT return values to code
+               documentation comments for slapi *GetName() functions and others
+               that return string data.
+
+3 (5/31/2013): Fixed install paths of XmlExporter and XmlImporter plugin samples
+               to link to slapi.framework as SketchUp does to prevent loader
+               problems.
+
+2 (5/23/2013): Updated deprecated SketchUpReader.dll to be able to read SU2013
+               format files.
+
+1 (5/22/2013): Initial release

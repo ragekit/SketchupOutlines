@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Win">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{0f200f38-99c7-4371-9def-700545b3b6c3}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{47f78b60-9dd4-4ab5-9400-b59119b4d0d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SketchUp Interfaces">
+      <UniqueIdentifier>{2517df89-4690-420e-aba9-116352af14de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugin">
+      <UniqueIdentifier>{83afb14d-e209-4666-b329-9f879b9ea83a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LocalizedStrings.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="SkpToXML.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLExportResultsDlg.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLOptionsDlg.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\GeomUtilities.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\InheritanceManager.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\stdafx.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\XMLExporter.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\XMLExporterBase.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\XMLOptions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Interfaces\SketchUp_i.c">
+      <Filter>SketchUp Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\plugin\xmlplugin.cpp">
+      <Filter>Plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="xmlpluginwin.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLExportResultsDlg.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLOptionsDlg.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\GeomUtilities.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\HResult.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\InheritanceManager.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\LocalizedStrings.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\stdafx.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\XMLExporter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\XMLExporterBase.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\XMLOptions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Interfaces\SketchUp_i.h">
+      <Filter>SketchUp Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\plugin\xmlplugin.h">
+      <Filter>Plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="xmlpluginwin.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SkpToXML.def">
+      <Filter>Win</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SkpToXML.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

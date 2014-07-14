@@ -1,0 +1,328 @@
+/**
+ * Standardize some typography.
+ */
+body, table, div, p, dl {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 24px;
+}
+body {
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 36px;
+  margin-top: 48px;
+  font-weight: 300;
+}
+h2 {
+  margin-top: 24px;
+  font-weight: 600;
+}
+h2.groupheader {
+  color: black;
+  border-bottom: 1px solid black;
+}
+div.title {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/**
+ * Add some whitespace around the main page and the code blocks.
+ */
+div.contents {
+	margin: 48px;
+}
+div.fragment {
+  padding: 12px;
+  background: #f8f8f8;
+  border: 1px solid #dadde0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/**
+ * Style the header bar.
+ */
+#titlearea {
+  border-bottom: 1px solid #333;
+  color: white;
+  background: #4d5259;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4d5259 0%, #61656c 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d5259), color-stop(100%, #61656c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4d5259 0%, #61656c 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #4d5259 0%, #61656c 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #4d5259 0%, #61656c 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #4d5259 0%, #61656c 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d5259', endColorstr='#61656c',GradientType=0 );
+  /* IE6-8 */
+  padding-left: 40px;
+}
+#titlearea td {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(su-logo-140.png);
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  
+}
+#titlearea td:before {
+  content: "SDK Documentation";
+  font-size: 25px;
+  color: white;
+  letter-spacing: -1px;
+  padding-left: 145px;
+  font-weight: 300;
+  margin-left: 12px;
+}
+#projectname {
+  display: none;
+}
+
+/**
+ * Use "SketchUp Red" for links.
+ */
+a {
+  color: #E72B2D;
+}
+a.el {
+  font-weight: normal;
+}
+.contents a:visited {
+  color: #E72B2D;
+}
+
+/**
+ * Style the page text header.
+ */
+.headertitle {
+  background: #f8f8f8;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+div.header {
+  border-bottom: 1px solid #dadde0;
+}
+
+/**
+ * Style the footer.
+ */
+address.footer {
+  background-color: #005596;
+  color: white;
+  font-size: 11px;
+  font-weight: normal;
+  background-image: url(trimble-logo-small.png);
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  overflow: hidden;
+  height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px 12px 0 0;
+}
+hr.footer {
+  display: none;
+}
+img.footer {
+  width: 52px;
+  height: 15px;
+}
+
+/**
+ * Style the navigation tabs.
+ */
+#navrow1, #navrow2, #navrow3, #navrow4, #nav-path {
+  padding-left: 56px;
+  padding-right: 48px;
+  background: #f8f8f8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(100%, #e0e0e0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f8f8f8 0%, #e0e0e0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#e0e0e0',GradientType=0 );
+  /* IE6-8 */
+  border-bottom: 1px solid #ACACAC;
+}
+.tablist li {
+  background: none;
+  border-left: 1px solid #ACACAC;
+  border-right: 1px solid #ACACAC;
+  margin-left: -1px;
+  background-image: none;
+}
+.tablist li a {
+  font-weight: normal;
+  background-image: none;
+}
+.tabs, .tabs2, .tabs3 {
+  font-family: 'Open Sans', sans-serif;
+}
+.tablist li {
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  xborder-left: 1px solid #aaa;
+  margin-left: -2px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: -1px 0px 2px -1px rgba(0,0,0,.5);
+  margin-right: 6px;
+  margin-top: 8px;
+}
+.tablist li a {
+  padding-top: 0;
+  background: transparent;
+  line-height: 24px;
+  color: #4D5259;
+}
+.tablist li a:hover {
+  background: #E72B2D;
+}
+.tablist li.current {
+  background: #f8f8f8;
+  position: relative;
+  top: 1px;
+  margin-top: 6px;
+  padding-top: 2px;
+}
+.tablist li.current a {
+  background-image: none;
+  background: none;
+  color: black;
+  text-shadow: none;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/**
+ * Style the main member documentation.
+ */
+.memproto {
+  background: #f8f8f8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(100%, #e0e0e0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f8f8f8 0%, #e0e0e0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#e0e0e0',GradientType=0 );
+  /* IE6-8 */
+  border: 1px solid #a8a8a8;
+  border-bottom: 0;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+.memdoc {
+  background: white;
+  border: 1px solid #a8a8a8;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  padding: 12px;
+  padding-top: 0;
+}
+
+/**
+ * Position the search field.
+ */
+#MSearchBox {
+  margin-top: -2px;
+  margin-right: 40px;
+}
+
+/**
+ * Breadcrumb styling.
+ */
+#nav-path ul {
+  background: none;
+  border: 0;
+}
+#nav-path li {
+  background-image: none;
+  margin-left: 12px;
+  padding: 0;
+}
+#nav-path li:after {
+  content: "/";
+  position: absolute;
+  z-index: 500;
+  margin-top: -32px;
+  margin-left: -8px;
+  font-size: 15px;
+}
+
+/**
+ * Style the field table.
+ */
+table.fieldtable {
+  border: 1px solid #a8a8a8;
+}
+.fieldtable td.fieldname {
+  border-right: 1px solid #a8a8a8;
+  border-bottom: 1px solid #a8a8a8;
+}
+.fieldtable td.fielddoc {
+  border-bottom: 1px solid #a8a8a8;
+}
+.fieldtable th {
+  border-bottom: 1px solid #a8a8a8;
+  background: #f8f8f8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(100%, #e0e0e0));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f8f8f8 0%, #e0e0e0 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f8f8f8 0%, #e0e0e0 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#e0e0e0',GradientType=0 );
+  /* IE6-8 */
+}
+
+/**
+ * Style the summary at the top of the member pages.
+ */
+.summary {
+  margin-right: 48px;
+}
+
+/**
+ * Style the index letter bar.
+ */
+div.qindex {
+  padding: 3px;
+  background: #f8f8f8;
+  border: 1px solid #dadde0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}

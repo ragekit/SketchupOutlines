@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Migration Guide for SketchUp SDK</title> 
+<link href="documentation/doxygen.css" rel="stylesheet" type="text/css" />
+<link href="documentation/sketchup.css" rel="stylesheet" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,700,600&#39; rel='stylesheet' type='text/css'>
+  <style type="text/css">
+
+ p.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+    .auto-style1 {
+      font-size: x-large;
+      font-weight: bold;
+    }
+    .auto-style2 {
+      font-size: medium;
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body> 
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<br />
+<div class="contents">
+<div class="textblock">
+<table border="0" cellpadding="2" cellspacing="0" width="100%"> 
+  <tbody> 
+    <tr> 
+      <td>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span class="auto-style1" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black">Migrating a SketchUp C++ API Plugin to SketchUp 2014</span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">The SDK shipping with SketchUp 2014 has two parts: an API and an import/export plugin interface. &nbsp;Like the original SketchUp C++ SDKs (SkpReader and SkpWriter), the SketchUp 2014 SDK allows third party developers to write plugin importers and exporters for SketchUp as well as standalone applications that read and write SketchUp files.</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">The new API differs both in technology and in structure. &nbsp;It uses a pure C interface (no more COM!), providing access to a SketchUp model and the entities it contains. The model can be loaded from a file or created from scratch in memory. Currently the API does not allow interaction with an active model in a running SketchUp process.</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">The new import/export plugin interface allows you to create a plugin DLL that will either export data from the active SketchUp model, or import data into the active SketchUp model.</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">If you have a standalone application that is using SkpReader to read from .skp files, you may continue to use this old API for the time being. You can find SkpReader under the ‘deprecated’ directory inside the new SDK package. <u>Please note that the SkpReader API is now deprecated, and support will be dropped fully with the release of SketchUp 2015.&nbsp;Support for SkpWriter has been officially dropped with the release of SketchUp 2014.</u> Therefore, you are advised to port your code to the new API as soon as possible.</span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">If you have an importer and/or exporter DLL that uses the SkpReader or SkpWriter APIs, you can get them running within SketchUp 2014 by updating your code to use the new plugin interface. This should be relatively straightforward and you’ll find step-by-step instructions below to guide you. We have updated the SkpReader example from the old SDK package to use the new plugin interface as a working example. You can find the migrated ‘skptoxml’ example inside the ‘deprecated’ directory of the SDK package.</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span class="auto-style2" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black">Migrating a SkpReader-based Exporter plugin to SketchUp 2014</span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Exporter plugins are now required to:</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Arial;color:black"><span style="mso-list:Ignore">1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Provide an implementation of SketchUpModelExporterInterface. However, for existing SkpReader-based exporters, we provide a secondary interface called SketchUpDeprecatedModelExporterInterface which can be implemented instead. This deprecated interface allows continued use of the SkpReader API.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Arial;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Return a pointer to the concrete object that implements this interface.<br style="mso-special-character:line-break" />
+<![endif]><o:p></o:p></span>
+        </p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Here are the general steps to convert an existing exporter:</span><span style="font-size:13.5pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l0 level1 lfo2;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Exporters are no longer required to be COM servers, so you may delete all COM-boilerplate functions such as DllRegisterServer, DllUnregisterServer, DllGetClassObject, DllCanUnloadNow. You may also delete the AtlModule implementation class, if you have one.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l0 level1 lfo2;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Write a class that derives from SketchUpDeprecatedModelExporterInterface. This new class will essentially be the replacement for an existing class that you should already have, i.e. the class that implements ISketchUpExporter, ISupportExporterOptions, ISupportExporterAbout, etc. You will find that most existing member functions have counterparts in the new interface. For example:<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">DoExport =&gt; DeprecatedConvertFromSkp</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">get_Id =&gt; GetIdentifier</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">get_Count =&gt; GetFileExtensionCount</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">get_FileExtension =&gt; GetFileExtension</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">get_Description =&gt; GetDescription</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">GetOptions =&gt; ShowOptionsDialog</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">ShowSummary =&gt; ShowSummaryDialog</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l3 level1 lfo3;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Delete the include statement for SketchUpAddin.h since that file declared the old plugin interfaces.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l3 level1 lfo3;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">On Windows, export a function called GetSketchUpModelExporterInterface that returns a pointer to your concrete object that is implementing SketchUpDeprecatedModelExporterInterface. This object should stay alive during the entire export operation. So, you may want to use the Singleton design pattern to manage the lifetime of this object. Here’s an example from the ‘skptoxml’ sample project:<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p>&nbsp;</o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">SketchUpModelExporterInterface* GetSketchUpModelExporterInterface() {<br />
+          &nbsp;return CXmlExporterPluginWin::GetInstance();<br />
+          }<br style="mso-special-character:line-break" />
+<![endif]></span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><o:p></o:p></span>
+        </p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo4;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">On Mac, provide an implementation of the SketchUpModelExporterPlugin protocol. Similar to the exported function on Windows, this protocol provides a function to obtain a pointer to the </span><span style="font-size:14.5pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">
+          <br />
+          </span><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">concrete object that is implementing SketchUpDeprecatedModelExporterInterface. See modelexporterplugin.h for the definition of this protocol.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo4;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Implement the conversion in your override of DeprecatedConvertFromSkp. Note that the first parameter of this function is a pointer to the ISkpDocument interface of the SketchUp model you are exporting. You can cast this pointer to ISkpDocument* and continue to use your existing SkpReader-based conversion code.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo4;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">The old progress feedback interface, IProgressCB, has been replaced with SketchUpPluginProgressCallback. The new interface is almost identical to the old one with the exception of the SetProgressMessage function, which now takes a UTF-8 encoded std::string instead of a COM BSTR.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l1 level1 lfo4;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:10.0pt;mso-bidi-font-size:11.5pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;color:black"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Make sure Runtime Type Information (RTTI) is turned on in your C++ compiler settings.<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          &nbsp;</p>
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">You should now be able to build the project and use your exporter within SketchUp 2014.</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <br />
+        <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black"><b>Note:</b> On Mac, the underlying implementation of BSTR has changed. It can no longer be directly cast to/from NSString. Possible implementations of conversions to/from an NSString are given below. For an example, see deprecated/SkpReader/Examples/SkpStats.</span><span style="font-size:13.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black"><o:p></o:p></span></p>
+        <br />
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal">
+          <span style="font-size:11.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">_bstr_t NSStringToBSTR(NSString* str) {<br />
+          &nbsp;  return _bstr_t([str UTF8String]);<br />
+          }<br style="mso-special-character:line-break" />
+<![endif]></span>
+          <br />
+          <span style="font-size:11.5pt;font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black">NSString* BSTRToNSString(_bstr_t str) {<br />
+          &nbsp;  const char* buf = static_cast&lt;const char*&gt;(str);<br />
+          &nbsp;  return [NSString stringWithUTF8String:buf];<br />
+          }<br style="mso-special-character:line-break" />
+<![endif]></span>
+        </p>
+        <p class="MsoNormal">
+          <b><span style="font-size:13.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black"><span class="auto-style2" style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; mso-fareast-font-family: &quot;Times New Roman&quot;; color: black">Migrating a SkpWriter-based Importer plugin to SketchUp 2014</span></span></b></p>
+        <p class="MsoNormal">
+          It is not possible to migrate old plugins using the SkpWriter API to SketchUp 2014. Support for SkpWriter has been officially dropped with the release of SketchUp 2014. Instead, it is necessary to create importer plugins using the C API that was introduced with SketchUp 2013. </p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Arial;color:black"><span style="mso-list:Ignore"><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Importer plugins are now required to:</span><o:p></o:p></span></span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          &nbsp;</p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Arial;color:black"><span style="mso-list:Ignore">
+          <o:p></o:p>1.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Provide an implementation of <span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">SketchUpModelImporterInterface</span>.</span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          <![if !supportLists]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Arial;color:black"><span style="mso-list:Ignore">2.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style="font-size:11.5pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">Return a pointer to the concrete object that implements this interface.</span></p>
+        <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+mso-list:l2 level1 lfo1;tab-stops:list .5in;vertical-align:baseline">
+          &nbsp;</p>
+      </td> 
+    </tr>
+  </tbody> 
+</table>  
+</div>
+</div>
+<br />
+<hr class="footer"/>
+<address class="footer"></address>
+
+</body>
+</html>

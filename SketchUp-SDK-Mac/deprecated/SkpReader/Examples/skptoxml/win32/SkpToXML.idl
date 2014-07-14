@@ -1,0 +1,34 @@
+// SkpToXML.idl : IDL source for SkpToXML
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SkpToXML.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(7FA33623-85DB-408A-B2B5-A7A37748935D),
+	helpstring("ISkpToXMLExporter Interface"),
+	pointer_default(unique)
+]
+interface ISkpToXMLExporter : IUnknown{
+};
+[
+	uuid(AD4179F7-02BB-45D5-AF3D-3414632746E8),
+	version(1.0),
+	helpstring("SkpToXML 1.0 Type Library")
+]
+library SkpToXMLLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E537CE0E-C46B-4D69-A7BF-80B7EA68A750),
+		helpstring("SkpToXMLExporter Class")
+	]
+	coclass SkpToXMLExporter
+	{
+		[default] interface ISkpToXMLExporter;
+	};
+};

@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		33184A7718C8E61B00B4ABA4 /* libCommonUnits.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33184A7618C8E61B00B4ABA4 /* libCommonUnits.dylib */; };
+		33184A7918C8E63A00B4ABA4 /* libCommonUnits.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33184A7618C8E61B00B4ABA4 /* libCommonUnits.dylib */; };
+		33EDF63B176D5D4F0014C223 /* SketchUpReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF63A176D5D4F0014C223 /* SketchUpReader.framework */; };
+		33EDF643176D5D730014C223 /* libCommonGeometry.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF63C176D5D730014C223 /* libCommonGeometry.dylib */; };
+		33EDF644176D5D730014C223 /* libCommonGeoutils.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF63D176D5D730014C223 /* libCommonGeoutils.dylib */; };
+		33EDF645176D5D730014C223 /* libCommonImage.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF63E176D5D730014C223 /* libCommonImage.dylib */; };
+		33EDF646176D5D730014C223 /* libCommonInternet.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF63F176D5D730014C223 /* libCommonInternet.dylib */; };
+		33EDF647176D5D730014C223 /* libCommonUtils.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF640176D5D730014C223 /* libCommonUtils.dylib */; };
+		33EDF648176D5D730014C223 /* libCommonZip.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF641176D5D730014C223 /* libCommonZip.dylib */; };
+		33EDF649176D5D730014C223 /* libSketchupMacwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EDF642176D5D730014C223 /* libSketchupMacwin.a */; };
+		33EDF64A176D5D9A0014C223 /* libCommonGeometry.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF63C176D5D730014C223 /* libCommonGeometry.dylib */; };
+		33EDF64B176D5D9A0014C223 /* libCommonGeoutils.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF63D176D5D730014C223 /* libCommonGeoutils.dylib */; };
+		33EDF64C176D5D9A0014C223 /* libCommonImage.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF63E176D5D730014C223 /* libCommonImage.dylib */; };
+		33EDF64D176D5D9A0014C223 /* libCommonInternet.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF63F176D5D730014C223 /* libCommonInternet.dylib */; };
+		33EDF64E176D5D9A0014C223 /* libCommonUtils.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF640176D5D730014C223 /* libCommonUtils.dylib */; };
+		33EDF64F176D5D9A0014C223 /* libCommonZip.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF641176D5D730014C223 /* libCommonZip.dylib */; };
+		33EDF650176D5DAA0014C223 /* SketchUpReader.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 33EDF63A176D5D4F0014C223 /* SketchUpReader.framework */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		C0C1C0EF128B350900F8E390 /* Controller.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0C1C0EE128B350900F8E390 /* Controller.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0C1C131128B387D00F8E390 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33EDF650176D5DAA0014C223 /* SketchUpReader.framework in CopyFiles */,
+				33EDF64A176D5D9A0014C223 /* libCommonGeometry.dylib in CopyFiles */,
+				33EDF64B176D5D9A0014C223 /* libCommonGeoutils.dylib in CopyFiles */,
+				33EDF64C176D5D9A0014C223 /* libCommonImage.dylib in CopyFiles */,
+				33EDF64D176D5D9A0014C223 /* libCommonInternet.dylib in CopyFiles */,
+				33184A7918C8E63A00B4ABA4 /* libCommonUnits.dylib in CopyFiles */,
+				33EDF64E176D5D9A0014C223 /* libCommonUtils.dylib in CopyFiles */,
+				33EDF64F176D5D9A0014C223 /* libCommonZip.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* SkpStats_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkpStats_Prefix.pch; sourceTree = "<group>"; };
+		33184A7618C8E61B00B4ABA4 /* libCommonUnits.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonUnits.dylib; path = ../../Binaries/Mac/libCommonUnits.dylib; sourceTree = "<group>"; };
+		33EDF63A176D5D4F0014C223 /* SketchUpReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SketchUpReader.framework; path = ../../Binaries/Mac/SketchUpReader.framework; sourceTree = "<group>"; };
+		33EDF63C176D5D730014C223 /* libCommonGeometry.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonGeometry.dylib; path = ../../Binaries/Mac/libCommonGeometry.dylib; sourceTree = "<group>"; };
+		33EDF63D176D5D730014C223 /* libCommonGeoutils.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonGeoutils.dylib; path = ../../Binaries/Mac/libCommonGeoutils.dylib; sourceTree = "<group>"; };
+		33EDF63E176D5D730014C223 /* libCommonImage.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonImage.dylib; path = ../../Binaries/Mac/libCommonImage.dylib; sourceTree = "<group>"; };
+		33EDF63F176D5D730014C223 /* libCommonInternet.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonInternet.dylib; path = ../../Binaries/Mac/libCommonInternet.dylib; sourceTree = "<group>"; };
+		33EDF640176D5D730014C223 /* libCommonUtils.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonUtils.dylib; path = ../../Binaries/Mac/libCommonUtils.dylib; sourceTree = "<group>"; };
+		33EDF641176D5D730014C223 /* libCommonZip.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonZip.dylib; path = ../../Binaries/Mac/libCommonZip.dylib; sourceTree = "<group>"; };
+		33EDF642176D5D730014C223 /* libSketchupMacwin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSketchupMacwin.a; path = ../../Binaries/Mac/libSketchupMacwin.a; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SkpStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkpStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C1C0ED128B350900F8E390 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		C0C1C0EE128B350900F8E390 /* Controller.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Controller.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				33EDF63B176D5D4F0014C223 /* SketchUpReader.framework in Frameworks */,
+				33EDF643176D5D730014C223 /* libCommonGeometry.dylib in Frameworks */,
+				33EDF644176D5D730014C223 /* libCommonGeoutils.dylib in Frameworks */,
+				33EDF645176D5D730014C223 /* libCommonImage.dylib in Frameworks */,
+				33EDF646176D5D730014C223 /* libCommonInternet.dylib in Frameworks */,
+				33184A7718C8E61B00B4ABA4 /* libCommonUnits.dylib in Frameworks */,
+				33EDF647176D5D730014C223 /* libCommonUtils.dylib in Frameworks */,
+				33EDF648176D5D730014C223 /* libCommonZip.dylib in Frameworks */,
+				33EDF649176D5D730014C223 /* libSketchupMacwin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C0C1C0ED128B350900F8E390 /* Controller.h */,
+				C0C1C0EE128B350900F8E390 /* Controller.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33EDF63A176D5D4F0014C223 /* SketchUpReader.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SkpStats.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SkpStats */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = SkpStats;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* SkpStats_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0C1C137128B38BF00F8E390 /* Libraries */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0C1C137128B38BF00F8E390 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				33EDF63C176D5D730014C223 /* libCommonGeometry.dylib */,
+				33EDF63D176D5D730014C223 /* libCommonGeoutils.dylib */,
+				33EDF63E176D5D730014C223 /* libCommonImage.dylib */,
+				33EDF63F176D5D730014C223 /* libCommonInternet.dylib */,
+				33184A7618C8E61B00B4ABA4 /* libCommonUnits.dylib */,
+				33EDF640176D5D730014C223 /* libCommonUtils.dylib */,
+				33EDF641176D5D730014C223 /* libCommonZip.dylib */,
+				33EDF642176D5D730014C223 /* libSketchupMacwin.a */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* SkpStats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SkpStats" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				C0C1C131128B387D00F8E390 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkpStats;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SkpStats;
+			productReference = 8D1107320486CEB800E47090 /* SkpStats.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SkpStats" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SkpStats */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SkpStats */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				C0C1C0EF128B350900F8E390 /* Controller.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Binaries/Mac\"",
+					"\"$(SRCROOT)/../../../../../SkpWriter/Binaries/Mac\"",
+					"\"$(SRCROOT)/../../Binaries/Mac\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SkpStats_Prefix.pch;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../../SkpWriter/Headers/source/sketchup/\"/**";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../SkpWriter/Binaries/Mac\"",
+					"\"$(SRCROOT)/../../../../Binaries/Mac\"",
+					"\"$(SRCROOT)/../../Binaries/Mac\"",
+				);
+				PRODUCT_NAME = SkpStats;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Binaries/Mac\"",
+					"\"$(SRCROOT)/../../../../../SkpWriter/Binaries/Mac\"",
+					"\"$(SRCROOT)/../../Binaries/Mac\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SkpStats_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../SkpWriter/Binaries/Mac\"",
+					"\"$(SRCROOT)/../../../../Binaries/Mac\"",
+					"\"$(SRCROOT)/../../Binaries/Mac\"",
+				);
+				PRODUCT_NAME = SkpStats;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SkpStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SkpStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

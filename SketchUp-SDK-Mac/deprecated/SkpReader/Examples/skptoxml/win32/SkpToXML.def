@@ -1,0 +1,6 @@
+; SkpToXML.def : Declares the module parameters.
+
+LIBRARY      "SkpToXML.DLL"
+
+EXPORTS
+  GetSketchUpModelExporterInterface

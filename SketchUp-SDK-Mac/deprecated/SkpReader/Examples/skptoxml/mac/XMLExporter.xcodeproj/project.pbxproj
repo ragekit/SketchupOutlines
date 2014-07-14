@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33750013173C4490009517F5 /* slapi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33750012173C4490009517F5 /* slapi.framework */; };
+		33826241171DE438003D438C /* libCommonUtils.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33826240171DE438003D438C /* libCommonUtils.dylib */; };
+		33C53D30171DC4E300976A64 /* GeomUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33C53D25171DC4E300976A64 /* GeomUtilities.cpp */; };
+		33C53D31171DC4E300976A64 /* GeomUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C53D26171DC4E300976A64 /* GeomUtilities.h */; };
+		33C53D32171DC4E300976A64 /* HResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C53D27171DC4E300976A64 /* HResult.h */; };
+		33C53D33171DC4E300976A64 /* InheritanceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33C53D28171DC4E300976A64 /* InheritanceManager.cpp */; };
+		33C53D34171DC4E300976A64 /* InheritanceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C53D29171DC4E300976A64 /* InheritanceManager.h */; };
+		33C53D35171DC4E300976A64 /* LocalizedStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C53D2A171DC4E300976A64 /* LocalizedStrings.h */; };
+		33C53D36171DC4E300976A64 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33C53D2B171DC4E300976A64 /* stdafx.cpp */; };
+		33C53D37171DC4E300976A64 /* stdafx.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C53D2C171DC4E300976A64 /* stdafx.h */; };
+		33C53D38171DC4E300976A64 /* XMLExporterBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33C53D2D171DC4E300976A64 /* XMLExporterBase.cpp */; };
+		33C53D39171DC4E300976A64 /* XMLExporterBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C53D2E171DC4E300976A64 /* XMLExporterBase.h */; };
+		33C53D3A171DC4E300976A64 /* XMLOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33C53D2F171DC4E300976A64 /* XMLOptions.cpp */; };
+		33C53D3D171DC99B00976A64 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971F6BEE165C116300CBBD71 /* Cocoa.framework */; };
+		33C53D40171DC9E300976A64 /* libSketchupMacwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C53D1E171DC05B00976A64 /* libSketchupMacwin.a */; };
+		33C53D41171DC9E800976A64 /* SketchUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C53D3B171DC5C900976A64 /* SketchUp.framework */; };
+		33C53D47171DCC0500976A64 /* LocalizedStrings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33C53D46171DCC0500976A64 /* LocalizedStrings.mm */; };
+		37C750F108735AAE006B9AEC /* XMLExporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37C750E308735AAE006B9AEC /* XMLExporter.cpp */; };
+		37C75117087361C3006B9AEC /* SkpToXMLPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 37C75114087361C3006B9AEC /* SkpToXMLPlugin.mm */; };
+		3B80B751087DE15400E4A54B /* SkpToXMLOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B80B74F087DE15400E4A54B /* SkpToXMLOptions.xib */; };
+		81FB4FF516A7313C00D58714 /* xmlplugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81FB4FF316A7313C00D58714 /* xmlplugin.cpp */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		3BA6D892087B2D0800BC6555 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc.4_0;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33750012173C4490009517F5 /* slapi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = slapi.framework; path = ../../../../../slapi.framework; sourceTree = "<group>"; };
+		33826240171DE438003D438C /* libCommonUtils.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommonUtils.dylib; path = ../../../Binaries/Mac/libCommonUtils.dylib; sourceTree = "<group>"; };
+		33C53D1E171DC05B00976A64 /* libSketchupMacwin.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSketchupMacwin.a; path = ../../../Binaries/Mac/libSketchupMacwin.a; sourceTree = "<group>"; };
+		33C53D25171DC4E300976A64 /* GeomUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GeomUtilities.cpp; path = ../common/GeomUtilities.cpp; sourceTree = "<group>"; };
+		33C53D26171DC4E300976A64 /* GeomUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeomUtilities.h; path = ../common/GeomUtilities.h; sourceTree = "<group>"; };
+		33C53D27171DC4E300976A64 /* HResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HResult.h; path = ../common/HResult.h; sourceTree = "<group>"; };
+		33C53D28171DC4E300976A64 /* InheritanceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InheritanceManager.cpp; path = ../common/InheritanceManager.cpp; sourceTree = "<group>"; };
+		33C53D29171DC4E300976A64 /* InheritanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InheritanceManager.h; path = ../common/InheritanceManager.h; sourceTree = "<group>"; };
+		33C53D2A171DC4E300976A64 /* LocalizedStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalizedStrings.h; path = ../common/LocalizedStrings.h; sourceTree = "<group>"; };
+		33C53D2B171DC4E300976A64 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ../common/stdafx.cpp; sourceTree = "<group>"; };
+		33C53D2C171DC4E300976A64 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = ../common/stdafx.h; sourceTree = "<group>"; };
+		33C53D2D171DC4E300976A64 /* XMLExporterBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLExporterBase.cpp; path = ../common/XMLExporterBase.cpp; sourceTree = "<group>"; };
+		33C53D2E171DC4E300976A64 /* XMLExporterBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLExporterBase.h; path = ../common/XMLExporterBase.h; sourceTree = "<group>"; };
+		33C53D2F171DC4E300976A64 /* XMLOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLOptions.cpp; path = ../common/XMLOptions.cpp; sourceTree = "<group>"; };
+		33C53D3B171DC5C900976A64 /* SketchUp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SketchUp.framework; path = ../../../Binaries/Mac/SketchUp.framework; sourceTree = "<group>"; };
+		33C53D46171DCC0500976A64 /* LocalizedStrings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LocalizedStrings.mm; sourceTree = "<group>"; };
+		37C750E308735AAE006B9AEC /* XMLExporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLExporter.cpp; path = ../Common/XMLExporter.cpp; sourceTree = SOURCE_ROOT; };
+		37C750E408735AAE006B9AEC /* XMLExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLExporter.h; path = ../Common/XMLExporter.h; sourceTree = SOURCE_ROOT; };
+		37C75113087361C3006B9AEC /* SkpToXMLPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkpToXMLPlugin.h; sourceTree = "<group>"; };
+		37C75114087361C3006B9AEC /* SkpToXMLPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SkpToXMLPlugin.mm; sourceTree = "<group>"; };
+		3B80B750087DE15400E4A54B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/SkpToXMLOptions.xib; sourceTree = "<group>"; };
+		817F4AB716B56B070081637C /* xmloptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xmloptions.h; path = ../common/xmloptions.h; sourceTree = "<group>"; };
+		81FB4FF316A7313C00D58714 /* xmlplugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xmlplugin.cpp; path = ../plugin/xmlplugin.cpp; sourceTree = "<group>"; };
+		81FB4FF416A7313C00D58714 /* xmlplugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xmlplugin.h; path = ../plugin/xmlplugin.h; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* XmlExporter.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XmlExporter.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		971F6BEE165C116300CBBD71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C53D3D171DC99B00976A64 /* Cocoa.framework in Frameworks */,
+				33C53D40171DC9E300976A64 /* libSketchupMacwin.a in Frameworks */,
+				33C53D41171DC9E800976A64 /* SketchUp.framework in Frameworks */,
+				33826241171DE438003D438C /* libCommonUtils.dylib in Frameworks */,
+				33750013173C4490009517F5 /* slapi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* SkpToXML */ = {
+			isa = PBXGroup;
+			children = (
+				C0D3FEF210FE4D8D007ACEF8 /* Configuration */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = SkpToXML;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				33750012173C4490009517F5 /* slapi.framework */,
+				33826240171DE438003D438C /* libCommonUtils.dylib */,
+				33C53D3B171DC5C900976A64 /* SketchUp.framework */,
+				33C53D1E171DC05B00976A64 /* libSketchupMacwin.a */,
+				971F6BEE165C116300CBBD71 /* Cocoa.framework */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				3B80B74F087DE15400E4A54B /* SkpToXMLOptions.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				37C750DA08735A6F006B9AEC /* Common */,
+				C0E8DE0910FE3CEE00CE4393 /* mac */,
+				81FB4FF216A7312D00D58714 /* plugin */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* XmlExporter.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37C750DA08735A6F006B9AEC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				33C53D25171DC4E300976A64 /* GeomUtilities.cpp */,
+				33C53D26171DC4E300976A64 /* GeomUtilities.h */,
+				33C53D27171DC4E300976A64 /* HResult.h */,
+				33C53D28171DC4E300976A64 /* InheritanceManager.cpp */,
+				33C53D29171DC4E300976A64 /* InheritanceManager.h */,
+				33C53D2A171DC4E300976A64 /* LocalizedStrings.h */,
+				33C53D2B171DC4E300976A64 /* stdafx.cpp */,
+				33C53D2C171DC4E300976A64 /* stdafx.h */,
+				33C53D2D171DC4E300976A64 /* XMLExporterBase.cpp */,
+				33C53D2E171DC4E300976A64 /* XMLExporterBase.h */,
+				33C53D2F171DC4E300976A64 /* XMLOptions.cpp */,
+				37C750E308735AAE006B9AEC /* XMLExporter.cpp */,
+				37C750E408735AAE006B9AEC /* XMLExporter.h */,
+				817F4AB716B56B070081637C /* xmloptions.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		81FB4FF216A7312D00D58714 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				81FB4FF316A7313C00D58714 /* xmlplugin.cpp */,
+				81FB4FF416A7313C00D58714 /* xmlplugin.h */,
+			);
+			name = plugin;
+			sourceTree = "<group>";
+		};
+		C0D3FEF210FE4D8D007ACEF8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		C0E8DE0910FE3CEE00CE4393 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				33C53D46171DCC0500976A64 /* LocalizedStrings.mm */,
+				37C75113087361C3006B9AEC /* SkpToXMLPlugin.h */,
+				37C75114087361C3006B9AEC /* SkpToXMLPlugin.mm */,
+			);
+			name = mac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C0ECB57F10F6F148009A1F95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C53D31171DC4E300976A64 /* GeomUtilities.h in Headers */,
+				33C53D32171DC4E300976A64 /* HResult.h in Headers */,
+				33C53D34171DC4E300976A64 /* InheritanceManager.h in Headers */,
+				33C53D35171DC4E300976A64 /* LocalizedStrings.h in Headers */,
+				33C53D37171DC4E300976A64 /* stdafx.h in Headers */,
+				33C53D39171DC4E300976A64 /* XMLExporterBase.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* XmlExporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25F0C5750B8B77F9008889ED /* Build configuration list for PBXNativeTarget "XmlExporter" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				C0ECB57F10F6F148009A1F95 /* Headers */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				336BF1491759585100F02398 /* ShellScript */,
+			);
+			buildRules = (
+				3BA6D892087B2D0800BC6555 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = XmlExporter;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = SkpToXML;
+			productReference = 8D5B49B6048680CD000E48DA /* XmlExporter.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 25F0C5790B8B77F9008889ED /* Build configuration list for PBXProject "XMLExporter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* SkpToXML */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* XmlExporter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				3B80B751087DE15400E4A54B /* SkpToXMLOptions.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		336BF1491759585100F02398 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun install_name_tool -change @rpath/slapi.framework/Versions/Current/slapi @executable_path/../Frameworks/slapi.framework/Versions/Current/slapi $BUILT_PRODUCTS_DIR/$EXECUTABLE_PATH";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37C75117087361C3006B9AEC /* SkpToXMLPlugin.mm in Sources */,
+				37C750F108735AAE006B9AEC /* XMLExporter.cpp in Sources */,
+				81FB4FF516A7313C00D58714 /* xmlplugin.cpp in Sources */,
+				33C53D30171DC4E300976A64 /* GeomUtilities.cpp in Sources */,
+				33C53D33171DC4E300976A64 /* InheritanceManager.cpp in Sources */,
+				33C53D36171DC4E300976A64 /* stdafx.cpp in Sources */,
+				33C53D38171DC4E300976A64 /* XMLExporterBase.cpp in Sources */,
+				33C53D3A171DC4E300976A64 /* XMLOptions.cpp in Sources */,
+				33C53D47171DCC0500976A64 /* LocalizedStrings.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3B80B74F087DE15400E4A54B /* SkpToXMLOptions.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B80B750087DE15400E4A54B /* English */,
+			);
+			name = SkpToXMLOptions.xib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25F0C5760B8B77F9008889ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../..,
+					../../../Binaries/Mac,
+					"\"$(SRCROOT)/../../../../../..\"",
+					"\"$(SRCROOT)/../../../Binaries/Mac\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../../../../..,
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Binaries/Mac\"",
+				);
+				PRODUCT_NAME = XmlExporter;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		25F0C57A0B8B77F9008889ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+			};
+			name = Debug;
+		};
+		C0853F1410FE86DD00120597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx10.8;
+			};
+			name = Release;
+		};
+		C0853F1510FE86DD00120597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../..,
+					../../../Binaries/Mac,
+					"\"$(SRCROOT)/../../../../../..\"",
+					"\"$(SRCROOT)/../../../Binaries/Mac\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../../../../..,
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Binaries/Mac\"",
+				);
+				PRODUCT_NAME = XmlExporter;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25F0C5750B8B77F9008889ED /* Build configuration list for PBXNativeTarget "XmlExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25F0C5760B8B77F9008889ED /* Debug */,
+				C0853F1510FE86DD00120597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25F0C5790B8B77F9008889ED /* Build configuration list for PBXProject "XMLExporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25F0C57A0B8B77F9008889ED /* Debug */,
+				C0853F1410FE86DD00120597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
